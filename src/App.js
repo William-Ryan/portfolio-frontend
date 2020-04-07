@@ -5,7 +5,7 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js'
 
 import Home from './components/Home.js'
-import Projects from './components/Projects.js'
+import ProjectList from './components/ProjectList.js'
 import About from './components/About.js'
 import Contact from './components/Contact.js'
 
@@ -15,7 +15,7 @@ function App() {
       <Header/>
       <Switch>
         <Route exact path='/' component={Home}/>
-        <Route exact path='/projects' component={Projects}/>
+        <Route exact path='/projects' component={ProjectList}/>
         <Route exact path='/about' component={About} />
         <Route exact path='/contact' component={Contact} />
       </Switch>
