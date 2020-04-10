@@ -8,7 +8,7 @@ const ProjectList = props => {
 
     useEffect(() => {
         props.fetchProjects()
-    }, [])
+    }, [props])
 
     return (
         <div>
