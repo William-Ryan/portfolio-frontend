@@ -87,10 +87,10 @@ const Header = () => {
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                    <MenuItem onClick={handleClose}><Link to="/" style={{ textDecoration: 'none', color: 'black'}}>Home</Link></MenuItem>
-                    <MenuItem onClick={handleClose}><Link to="/projects" style={{ textDecoration: 'none', color: 'black'}}>Projects</Link></MenuItem>
-                    <MenuItem onClick={handleClose}><Link to="/about" style={{ textDecoration: 'none', color: 'black'}}>About</Link></MenuItem>
-                    <MenuItem onClick={handleClose}><Link to="/contact" style={{ textDecoration: 'none', color: 'black'}}>Contact</Link></MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/" style={{ textDecorationLine: 'none', color: 'black'}}>Home</Link></MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/projects" style={{ textDecorationLine: 'none', color: 'black'}}>Projects</Link></MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/about" style={{ textDecorationLine: 'none', color: 'black'}}>About</Link></MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/contact" style={{ textDecorationLine: 'none', color: 'black'}}>Contact</Link></MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
