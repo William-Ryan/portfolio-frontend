@@ -9,18 +9,23 @@ import ProjectList from './components/ProjectList.js'
 import About from './components/About.js'
 import Contact from './components/Contact.js'
 
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/projects' component={ProjectList}/>
-        <Route exact path='/about' component={About} />
-        <Route exact path='/contact' component={Contact} />
-      </Switch>
-      <Footer/>
-    </div>
+    <Paper>
+      <div className="App">
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/projects' component={ProjectList}/>
+          <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contact} />
+        </Switch>
+        <Footer/>
+      </div>
+    </Paper>
   );
 }
 

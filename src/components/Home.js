@@ -1,16 +1,14 @@
 import React from 'react';
 
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography'
+
 const Home = () => {
     return (
         <div>
-            <h1>Welcome</h1>
-            <h3>And</h3>
-            <h1>Congratulations!</h1>
-            <p>You've just found your next... Full-Stack Web Developer!</p>
+            <h1>Welcome to My Portfolio Site</h1>
             <div>
-                <span role="img" aria-label="Right Arrow" >▶️</span>
-                <img src={require('../images/Professional.jpg')} alt="site owner"></img>
-                <span role="img" aria-label="Left Arrow" >◀️</span>
+                <img src={require('../images/Professional.jpg')} alt="site owner William"></img>
             </div>
         </div>
     )
