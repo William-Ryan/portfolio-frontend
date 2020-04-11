@@ -12,10 +12,18 @@ import Contact from './components/Contact.js'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
+const useStyles = makeStyles(() => ({
+  root: {
+      backgroundColor: '#32CD32',
+  }
+}))
+
 function App() {
+  const classes = useStyles();
+
   return (
-    <Paper>
-      <div className="App">
+    <Paper elevation={4}>
+      <div className={classes.root}>
         <Header/>
         <Switch>
           <Route exact path='/' component={Home}/>

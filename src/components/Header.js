@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         marginRight: theme.spacing(2),
     },
+    bar: {
+        backgroundColor: 'black'
+    }
 }));
 
 const Header = () => {
@@ -65,7 +68,7 @@ const Header = () => {
   
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" className={classes.bar}>
           <Toolbar>
             <IconButton edge="start" 
                 className={classes.menuButton} 
