@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Image from '../images/LightBulb.jpg';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     body1: {
         display: 'flex',
         flexDirection: 'row-reverse',
