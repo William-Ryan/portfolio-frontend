@@ -9,7 +9,7 @@ const Projects = props => {
             </div>
             <p>{props.project.description}</p>
             <h4>{props.project.skills}</h4>
-            <h5><a href={props.project.link}>GitHub Link</a></h5>
+            <h5><a href={props.project.GitHub}>GitHub Link</a></h5>
         </div>
     )
 }

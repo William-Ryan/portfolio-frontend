@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "portfolio-backend-e57d4"
+  }
+}
+
+// firebase deploy --only hosting:william-ryan-portfolio

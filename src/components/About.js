@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
     ending: {
         textAlign: 'center',
         padding: '2% 0%',
-        margin: '0% 8%'
+        margin: '0% 7%'
     }
 }))
 
@@ -33,9 +33,10 @@ const About = () => {
             <Typography variant={"h1"} align={'center'} style={{ fontSize: '5rem', margin: '1% 0%'}}>About Me</Typography>
             <div>
                 <Typography variant={"h2"} align={'center'} style={{ fontSize: '3rem', margin: '2% 0% 0%'}}>Who is William Ryan?</Typography>
-                <Typography variant={"body1"} paragraph={'true'} align={'center'} className={classes.body1}>I'm first and foremost a lover of technology and learning who's ambition and determination 
-                    allows them to tackle any problem head on and find the solution! My technical profession is 
-                    being a Full-Stack Developer, but truthfully I feel my education and experiences have given 
+                <Typography variant={"body1"} paragraph={'true'} align={'center'} className={classes.body1}>
+                    I'm foremost a lover of technology and learning, who's determination allows them to tackle 
+                    any problem head on towards finding a solution! My technical profession is being a 
+                    Full-Stack Developer, but truthfully I feel my education and experiences have given 
                     me so much more then the average Developer. I am confident with time I can take just about 
                     any language or library and gain an aptitude for it's knowledge. I look forward to getting to 
                     know you better and perhaps even working together. Thank you for your consideration!</Typography>
@@ -51,6 +52,7 @@ const About = () => {
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>LESS</li>
+                        <li>GreenSock</li>
                         <li>JavaScript</li>
                         <li>React</li>
                         <li>Redux</li>
@@ -85,7 +87,7 @@ const About = () => {
                         <li>Mentoring</li>
                         <li>Organized</li>
                         <li>Team-Oriented</li>
-                        <li>Independently Driven</li>
+                        <li>Remote Independent</li>
                         <li>Strives for Perfection</li>
                         <li>Innovative</li>
                     </ul>
@@ -94,7 +96,8 @@ const About = () => {
 
             </div>
             <div>
-                <Typography variant={'h6'} paragraph={'true'} className={classes.ending}>The technical skills I've listed here I feel confident in the ins and outs of their nature,
+                <Typography variant={'h6'} paragraph={'true'} className={classes.ending}>
+                    The technical skills I've listed above I feel confident with the ins and outs of their nature,
                     such as the use of custom hooks, parameters, and other nuances that they may be capable of.
                     This list is open and likely in this very moment is being expanded and explored so feel
                     free to inquire on any interests in fields that have not been directly stated above.
