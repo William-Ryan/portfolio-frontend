@@ -21,7 +21,8 @@ const useStyles = makeStyles(() => ({
         margin: '15% 41% 13% 5%',
     },
     profile: {
-        height: '20rem'
+        height: '20rem',
+        maxWidth: '100%'
     }
 }))
 
