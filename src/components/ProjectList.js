@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+//styled
+import styled from "styled-components";
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -12,6 +15,17 @@ import firebase from '../firebase.js'
 import { storage } from "firebase";
 
 import Particles from 'react-particles-js';
+import { CardMedia } from "@material-ui/core";
+
+const Part = styled.div`
+  width: 100%;
+  z-index: 2;
+`;
+
+const Big = styled.div`
+  position: absolute;
+  top: 2%
+`;
 
 const CardParticle = () => {
     return <Particles params= {{
@@ -203,13 +217,23 @@ const ProjectList = () => {
     const classes = useStyles();
 
     return (
-        <div>
+      <Part style={{zIndex: "-1"}}>
+          <CardParticle 
+            params={ CardParticle }
+            style={{
+            "zIndex": "-1"
+            }}
+          />
+        <div style={{ position: 'absolute', top: '15%'}}>
             <h1 className={classes.title}>Projects Showcase</h1>
             <div>
                 <h2 className={classes.title2}>Back-End Projects</h2>
                 <Grid container spacing={3} className={classes.container}>
                 {backendProjects.map((project) => 
                     <Card key={project.id} className={classes.root}>
+                        <CardMedia>
+
+                        </CardMedia>
                         <CardContent>
                             <Typography className={classes.cardTitle}>{project.Title}</Typography>
                             <Typography className={classes.body2}>{project.Description}</Typography>
@@ -242,6 +266,7 @@ const ProjectList = () => {
                     <h2>Front-End Projects</h2>
             </div>
         </div>
+        </Part>
     )
 }
 
