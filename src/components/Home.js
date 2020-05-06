@@ -13,15 +13,15 @@ const useStyles = makeStyles(() => ({
         alignItems: 'center',
         textAlign: 'center',
         backgroundImage: `url(${Image})`,
-        backgroundSize: 'cover',
+        backgroundSize: '100% 220%',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat'
     },
     body2: {
-        margin: '15% 41% 13% 5%',
+        margin: '15% 41% 10% 5%',
     },
     profile: {
-        height: '20rem',
+        height: '24rem',
         maxWidth: '100%'
     }
 }))

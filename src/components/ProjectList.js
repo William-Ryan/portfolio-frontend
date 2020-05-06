@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 //styled
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -11,11 +11,13 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
-import firebase from '../firebase.js'
-import { storage } from "firebase";
-
 import Particles from 'react-particles-js';
 import { CardMedia } from "@material-ui/core";
+
+// Redux
+import { connect } from "react-redux";
+// Actions
+import { fetchData } from '../actions' 
 
 const Part = styled.div`
   width: 100%;
@@ -186,62 +188,40 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'center',
         margin: '2% 0% 0%'
-    }
+    },
+    media: {
+      height: 0,
+      paddingTop: '56.25%', // 16:9
+    },
 });
 
-function Portfolio(){
-    const [backendProjects, setBackendProjects] = useState([])
-
-    useEffect(() => {
-        firebase
-            .firestore()
-            .collection('Portfolio')
-            .onSnapshot((snapshot) => {
-                const newBackendProjects = snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    ...doc.data(),
-                    
-                }))
-
-                setBackendProjects(newBackendProjects)
-            })
-    }, [])
-
-    return backendProjects
-}
-
-
-
-const ProjectList = () => {
-    const backendProjects = Portfolio()
+const ProjectList = (props) => {
     const classes = useStyles();
 
+    React.useEffect(() => {
+      props.fetchData()
+    },[])
+
     return (
-      <Part style={{zIndex: "-1"}}>
-          <CardParticle 
-            params={ CardParticle }
-            style={{
-            "zIndex": "-1"
-            }}
-          />
-        <div style={{ position: 'absolute', top: '15%'}}>
+        <div>
             <h1 className={classes.title}>Projects Showcase</h1>
             <div>
                 <h2 className={classes.title2}>Back-End Projects</h2>
                 <Grid container spacing={3} className={classes.container}>
-                {backendProjects.map((project) => 
-                    <Card key={project.id} className={classes.root}>
-                        <CardMedia>
-
+                {props.projects.map((project, index) => (
+                    <Card key={index} className={classes.root}>
+                        <CardMedia className={classes.media}
+                            image={project.Picture}
+                            title="Coding Example">
                         </CardMedia>
                         <CardContent>
                             <Typography className={classes.cardTitle}>{project.Title}</Typography>
                             <Typography className={classes.body2}>{project.Description}</Typography>
                             <Typography className={classes.subtitle}>Project Tech</Typography>
                             <div className={classes.list}>
-                            {project.Tech.map((tech) => 
+                            {project.Tech.map((tech, index) => 
                                 <Typography>
-                                    <ul key={tech.id}>
+                                    <ul key={index}>
                                         <li>{tech}</li>
                                     </ul>
                                 </Typography>
@@ -258,7 +238,7 @@ const ProjectList = () => {
                             </div>
                         </CardContent>
                     </Card>
-                )}
+                ))}
                 </Grid>
                 
             </div>
@@ -266,8 +246,14 @@ const ProjectList = () => {
                     <h2>Front-End Projects</h2>
             </div>
         </div>
-        </Part>
     )
 }
 
-export default ProjectList
+const mapStateToProps = state => {
+  return {
+    projects: state.projects
+  };
+};
+
+export default connect(mapStateToProps, {fetchData})(ProjectList);
+
