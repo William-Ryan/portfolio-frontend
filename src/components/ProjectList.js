@@ -144,9 +144,9 @@ const CardParticle = () => {
 
 const useStyles = makeStyles({
     root: {
-      width: '50%',
-      margin: '0 2%',
-      height: '28rem'
+      width: '94%',
+      height: '27rem',
+      margin: '0% auto'
     },
     title: {
         textAlign: 'center',
@@ -172,9 +172,14 @@ const useStyles = makeStyles({
         fontWeight: 'bold',
         margin: '0% 9%'
     },
-    container: {
-        flexGrow: 1,
-        flexWrap: 'nowrap',
+    container1:{
+        borderBottom: '5px dotted black',
+        width: '100%',
+        margin: '0%'
+    },
+    container2: {
+        margin: '0% auto',
+        width: '50%'
     },
     list: {
         display: 'flex',
@@ -190,8 +195,8 @@ const useStyles = makeStyles({
         margin: '2% 0% 0%'
     },
     media: {
-      height: 0,
-      paddingTop: '56.25%', // 16:9
+      height: '63vh',
+      margin: '0% -9% 5%'
     },
 });
 
@@ -205,15 +210,12 @@ const ProjectList = (props) => {
     return (
         <div>
             <h1 className={classes.title}>Projects Showcase</h1>
-            <div>
+            <div className={classes.container1}>
                 <h2 className={classes.title2}>Back-End Projects</h2>
-                <Grid container spacing={3} className={classes.container}>
+                <Grid className={classes.container2}>
                 {props.projects.map((project, index) => (
+                  <div>
                     <Card key={index} className={classes.root}>
-                        <CardMedia className={classes.media}
-                            image={project.Picture}
-                            title="Coding Example">
-                        </CardMedia>
                         <CardContent>
                             <Typography className={classes.cardTitle}>{project.Title}</Typography>
                             <Typography className={classes.body2}>{project.Description}</Typography>
@@ -238,6 +240,10 @@ const ProjectList = (props) => {
                             </div>
                         </CardContent>
                     </Card>
+                    <div>
+                  <img src={project.Picture} className={classes.media}/>
+                  </div>
+                    </div>
                 ))}
                 </Grid>
                 
