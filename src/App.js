@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 
 import Header from './components/Header.js';
@@ -11,11 +11,6 @@ import Contact from './components/Contact.js'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-
-import firebase from './firebase.js'
-
-// Ant Design
-import { List } from 'antd';
 
 const useStyles = makeStyles(() => ({
   root: {

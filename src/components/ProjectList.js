@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-//styled
-import styled, { ThemeProvider } from "styled-components";
+
+import styled from "styled-components";
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -12,11 +12,8 @@ import Grid from '@material-ui/core/Grid';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import Particles from 'react-particles-js';
-import { CardMedia } from "@material-ui/core";
 
-// Redux
 import { connect } from "react-redux";
-// Actions
 import { fetchData } from '../actions' 
 
 const Part = styled.div`
@@ -241,7 +238,7 @@ const ProjectList = (props) => {
                         </CardContent>
                     </Card>
                     <div>
-                  <img src={project.Picture} className={classes.media}/>
+                  <img src={project.Picture} alt="Screenshot example of code" className={classes.media}/>
                   </div>
                     </div>
                 ))}
