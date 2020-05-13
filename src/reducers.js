@@ -5,6 +5,7 @@ import {
 const initialState = {
     projects: []
 }
+
 export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
       case SET_PROJECTS:
