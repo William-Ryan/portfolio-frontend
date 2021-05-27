@@ -75,6 +75,7 @@ const About = () => {
                         <li>Sqlite3</li>
                         <li>Postgres</li>
                         <li>Postman</li>
+                        <li>Firebase</li>
                     </ul>
                 </Typography>
                 </div>

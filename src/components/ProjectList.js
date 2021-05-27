@@ -204,6 +204,11 @@ const useStyles = makeStyles({
       height: '63vh',
       margin: '0% -9% 5%'
     },
+    disclaimer: {
+      display: 'flex',
+      justifyContent: 'center',
+      margin: '0% 0% 0% 2%'
+    },
 });
 
 const ProjectList = (props) => {
@@ -254,7 +259,7 @@ const ProjectList = (props) => {
                 </Grid>
             </div>
           
-            <div className={classes.container1}>
+            <div className={classes.container1} style={{ borderBottom: '5px dotted black' }}>
                 <h2 className={classes.title2}>Front-End Projects</h2>
                 <Grid className={classes.container2}>
                   <div>
@@ -294,7 +299,7 @@ const ProjectList = (props) => {
                     </div>
                   </div>
                 </Grid>
-            </div>
+            
 
                 <Grid className={classes.container2}>
                   <div>
@@ -437,6 +442,14 @@ const ProjectList = (props) => {
                     </div>
                   </div>
                 </Grid>
+            </div>
+            <div className={classes.disclaimer}>
+              <p>This is only ten percent of the projects I've actually created and all of them were their own unique challenges. I wanted to showcase projects I was not only proud of
+                but also show you the journey and progress I made in about 3-4 months of being a fresh novice to a capable Full-Stack Developer. As a side note this Portfolio site is
+                the first time I was able to not only able to test my skills but also take the opportunity to learn more technology independent of the curriculum of Lambda School
+                <a href="https://github.com/William-Ryan/portfolio-frontend"> Portfolio GitHub </a> here.
+              </p>
+            </div>
         </div>
     )
 }
