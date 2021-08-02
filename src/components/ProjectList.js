@@ -243,7 +243,7 @@ const ProjectList = (props) => {
                             
                             <div className={classes.button}>
                                 <h6>GitHub Link</h6>
-                                <Button>
+                                <Button href={project.GitHub}>
                                     <GitHubIcon fontSize={'large'}>
                                         <a href={project.GitHub}>GitHub Link</a>
                                     </GitHubIcon>
@@ -286,7 +286,7 @@ const ProjectList = (props) => {
                             </div>
                             <div className={classes.button}>
                                 <h6>GitHub Link</h6>
-                                <Button>
+                                <Button href="https://github.com/replate-2/FE">
                                     <GitHubIcon fontSize={'large'}>
                                         <a href="https://github.com/replate-2/FE">GitHub Link</a>
                                     </GitHubIcon>
@@ -327,7 +327,7 @@ const ProjectList = (props) => {
                             </div>
                             <div className={classes.button}>
                                 <h6>GitHub Link</h6>
-                                <Button>
+                                <Button href="https://github.com/Build-Ride-For-Life/Front-End">
                                     <GitHubIcon fontSize={'large'}>
                                         <a href="https://github.com/Build-Ride-For-Life/Front-End">GitHub Link</a>
                                     </GitHubIcon>
@@ -363,7 +363,7 @@ const ProjectList = (props) => {
                             </div>
                             <div className={classes.button}>
                                 <h6>GitHub Link</h6>
-                                <Button>
+                                <Button href="https://github.com/William-Ryan/react-bubbles">
                                     <GitHubIcon fontSize={'large'}>
                                         <a href="https://github.com/William-Ryan/react-bubbles">GitHub Link</a>
                                     </GitHubIcon>
@@ -395,7 +395,7 @@ const ProjectList = (props) => {
                             </div>
                             <div className={classes.button}>
                                 <h6>GitHub Link</h6>
-                                <Button>
+                                <Button href="https://github.com/William-Ryan/Sprint-Challenge--JavaScript">
                                     <GitHubIcon fontSize={'large'}>
                                         <a href="https://github.com/William-Ryan/Sprint-Challenge--JavaScript">GitHub Link</a>
                                     </GitHubIcon>
@@ -429,7 +429,7 @@ const ProjectList = (props) => {
                             </div>
                             <div className={classes.button}>
                                 <h6>GitHub Link</h6>
-                                <Button>
+                                <Button href="https://github.com/Build-Week-Gigapet1/Marketing-Page">
                                     <GitHubIcon fontSize={'large'}>
                                         <a href="https://github.com/Build-Week-Gigapet1/Marketing-Page">GitHub Link</a>
                                     </GitHubIcon>
@@ -444,7 +444,7 @@ const ProjectList = (props) => {
                 </Grid>
             </div>
             <div className={classes.disclaimer}>
-              <p>This is only ten percent of the projects I've actually created and all of them were their own unique challenges. I wanted to showcase projects I was not only proud of
+              <p>This is only small percent of the projects I've actually created and all of them were their own unique challenges. I wanted to showcase projects I was not only proud of
                 but also show you the journey and progress I made in about 3-4 months of being a fresh novice to a capable Full-Stack Developer. As a side note this Portfolio site is
                 the first time I was able to not only able to test my skills but also take the opportunity to learn more technology independent of the curriculum of Lambda School
                 <a href="https://github.com/William-Ryan/portfolio-frontend"> Portfolio GitHub </a> here.

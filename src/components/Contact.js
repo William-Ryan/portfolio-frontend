@@ -26,7 +26,7 @@ const Contact = () => {
                 <Typography gutterBottom variant="h5" style={{ textAlign: 'center' }}>Contact Me</Typography>
                 <address>
                     <ul>
-                        <li>Location: Martinsburg, WV</li>
+                        <li>Location: West Virginia</li>
                         <li>Email: billy.ryan.rom@gmail.com</li>
                         <li>Message my <a href="https://www.linkedin.com/in/william-ryan-34a1981a1/">LinkedIn Account</a></li>
                     </ul>
