@@ -1,8 +1,5 @@
 import React from "react";
 
-
-import styled from "styled-components";
-
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -10,16 +7,20 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import CardMedia from '@material-ui/core/CardMedia';
 
 import { connect } from "react-redux";
 import { fetchData } from '../actions' 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     root: {
-      width: '94%',
-      height: '27rem',
-      margin: '0% auto'
+      width: '63%',
+      margin: '0% auto',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%'
     },
+    },
+    
     title: {
         textAlign: 'center',
         fontSize: '4rem'
@@ -28,6 +29,11 @@ const useStyles = makeStyles({
         textAlign: 'center',
         fontSize: '2.5rem',
         margin: '5% 0% 3%'
+    },
+    contentContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
     },
     cardTitle: {
       fontSize: '1.5rem',
@@ -49,8 +55,8 @@ const useStyles = makeStyles({
         margin: '0%'
     },
     container2: {
-        margin: '0% auto',
-        width: '50%'
+        display: 'flex',
+        flexDirection: 'column'
     },
     list1: {
         display: 'flex',
@@ -77,14 +83,15 @@ const useStyles = makeStyles({
     },
     media: {
       height: '63vh',
-      margin: '0% -9% 5%'
+      margin: '0% 0% 5%',
+      width: '100%'
     },
     disclaimer: {
       display: 'flex',
       justifyContent: 'center',
       margin: '0% 0% 0% 2%'
     },
-});
+}));
 
 const ProjectList = (props) => {
     const classes = useStyles();
@@ -100,7 +107,7 @@ const ProjectList = (props) => {
                 <h2 className={classes.title2}>Back-End Projects</h2>
                 <Grid className={classes.container2}>
                 {props.projects.map((project, index) => (
-                  <div>
+                  <div className={classes.contentContainer}>
                     <Card key={index} className={classes.root}>
                         <CardContent>
                             <Typography className={classes.cardTitle}>{project.Title}</Typography>
@@ -127,7 +134,7 @@ const ProjectList = (props) => {
                         </CardContent>
                     </Card>
                     <div>
-                      <img src={project.Picture} alt="Screenshot example of code" className={classes.media}/>
+                      <img resizeMode={'cover'} src={project.Picture} alt="Screenshot example of code" className={classes.media}/>
                     </div>
                   </div>
                 ))}
@@ -137,7 +144,7 @@ const ProjectList = (props) => {
             <div className={classes.container1} style={{ borderBottom: '5px dotted black' }}>
                 <h2 className={classes.title2}>Front-End Projects</h2>
                 <Grid className={classes.container2}>
-                  <div>
+                  <div className={classes.contentContainer}>
                     <Card className={classes.root}>
                         <CardContent>
                             <Typography className={classes.cardTitle}>Replate</Typography>
@@ -147,7 +154,7 @@ const ProjectList = (props) => {
                             <Typography className={classes.subtitle}>Project Tech</Typography>
                             <div>
                                 <Typography>
-                                    <ul className={classes.list2}>
+                                    <ul className={classes.list1}>
                                       <li className={classes.listItem}>React</li>
                                       <li className={classes.listItem}>React-Dom</li>
                                       <li className={classes.listItem}>React-Router-Dom</li>
@@ -177,8 +184,8 @@ const ProjectList = (props) => {
             
 
                 <Grid className={classes.container2}>
-                  <div>
-                    <Card className={classes.root} style={{ height: '30rem' }}>
+                  <div className={classes.contentContainer}>
+                    <Card className={classes.root}>
                         <CardContent>
                             <Typography className={classes.cardTitle}>Ride-For-Life</Typography>
                             <Typography className={classes.body2}>In this project I was the Junior Front-End React Developer working under my Senior. My objectives this project was 
@@ -187,7 +194,7 @@ const ProjectList = (props) => {
                             <Typography className={classes.subtitle}>Project Tech</Typography>
                             <div>
                                 <Typography>
-                                    <ul className={classes.list2}>
+                                    <ul className={classes.list1}>
                                       <li className={classes.listItem}>React</li>
                                       <li className={classes.listItem}>React-Dom</li>
                                       <li className={classes.listItem}>React-Router-Dom</li>
@@ -217,7 +224,7 @@ const ProjectList = (props) => {
                 </Grid>
 
                 <Grid className={classes.container2}>
-                  <div>
+                  <div className={classes.contentContainer}>
                     <Card className={classes.root}>
                         <CardContent>
                             <Typography className={classes.cardTitle}>React-Bubbles</Typography>
@@ -227,7 +234,7 @@ const ProjectList = (props) => {
                             <Typography className={classes.subtitle}>Project Tech</Typography>
                             <div>
                                 <Typography>
-                                    <ul className={classes.list2}>
+                                    <ul className={classes.list1}>
                                       <li className={classes.listItem}>React</li>
                                       <li className={classes.listItem}>React-Dom</li>
                                       <li className={classes.listItem}>React-Router-Dom</li>
@@ -253,7 +260,7 @@ const ProjectList = (props) => {
                 </Grid>
 
                 <Grid className={classes.container2}>
-                  <div>
+                  <div className={classes.contentContainer}>
                     <Card className={classes.root}>
                         <CardContent>
                             <Typography className={classes.cardTitle}>JavaScript-Sprint-Challenge</Typography>
@@ -263,7 +270,7 @@ const ProjectList = (props) => {
                             <Typography className={classes.subtitle}>Project Tech</Typography>
                             <div>
                                 <Typography>
-                                    <ul className={classes.list2}>
+                                    <ul className={classes.list1}>
                                       <li className={classes.listItem}>JavaScript</li>
                                     </ul>
                                 </Typography>
@@ -285,7 +292,7 @@ const ProjectList = (props) => {
                 </Grid>
 
                 <Grid className={classes.container2}>
-                  <div>
+                  <div className={classes.contentContainer}>
                     <Card className={classes.root}>
                         <CardContent>
                             <Typography className={classes.cardTitle}>Gigapet</Typography>
@@ -295,7 +302,7 @@ const ProjectList = (props) => {
                             <Typography className={classes.subtitle}>Project Tech</Typography>
                             <div>
                                 <Typography>
-                                    <ul className={classes.list2}>
+                                    <ul className={classes.list1}>
                                       <li className={classes.listItem}>Semantic HTML</li>
                                       <li className={classes.listItem}>CSS</li>
                                       <li className={classes.listItem}>LESS</li>
